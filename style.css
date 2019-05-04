@@ -1,4 +1,35 @@
 /*font-family: 'Roboto', sans-serif;*/
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
 }
+.rectangle {
+    height: 300px;
+    width: 200px;
+    background-color: #1B998B;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+  #text-carousel {
+      font-family: 'Roboto Thin', sans-serif;
+      font-weight: bold;
+      font-size: 6rem;
+      position: absolute;
+      left: 18em;
+      top: 8em;
+      z-index: 1;
+  }
+  .carousel-inner {
+      opacity: 0.5;
+  }
+  .button-read {
+    height: 3em;
+    width: 14em;
+    background-color: #F2F3AE;
+    position: absolute;
+    left: 105em;
+    top: 41em;
+    z-index: 1;
+    text-align: center;
+  }
