@@ -1,12 +1,49 @@
-$(document).ready(function(){
-    $("#news-slider").owlCarousel({
-        items:3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[1000,2],
-        itemsMobile:[600,1],
-        pagination:false,
-        navigationText:false,
-        autoPlay:true,
-    })
+let nCount = selector => {
+    $(selector).each(function () {
+        $(this)
+            .animate({
+                Counter: $(this).text()
+            }, {
+                duration: 3000,
+                easing: "swing",
+                /**
+                 * A function to be called for each animated property of each animated element. 
+                 * This function provides an opportunity to
+                 *  modify the Tween object to change the value of the property before it is set.
+                 */
+                step: function (value) {
+                    $(this).text(Math.ceil(value));
+                }
+            });
+    });
+};
 
+let a = 0;
+$(window).scroll(function () {
+    // The .offset() method allows us to retrieve the current position of an element  relative to the document
+    let oTop = $(".numbers").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() >= oTop) {
+        a++;
+        nCount(".rect > h1");
+    }
+});
+
+
+
+/**
+ *
+ *  sticky navigation
+ *
+ */
+
+let navbar = $(".navbar");
+
+$(window).scroll(function () {
+    // get the complete hight of window
+    let oTop = $(".section-2").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+        navbar.addClass("sticky");
+    } else {
+        navbar.removeClass("sticky");
+    }
 });
