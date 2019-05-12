@@ -49,11 +49,9 @@ body {
   .post-slide .post-info li{
     display: inline-block;
     margin: 0 5px;
-
   }
   .post-slide .post-info li i{
     margin-right: 8px; 
-
   }
   .post-slide .post-info li a {
     font-size: 11px;
@@ -78,7 +76,6 @@ body {
     opacity: 0;
     background: rgba(0,0,0,.6);
     transition: opacity 0.4s linear 0s;
-
   }
   .post-slide:hover .post-img:before{
     opacity: 1;
@@ -96,7 +93,7 @@ body {
     text-transform: capitalize;
     opacity: 0;
     transition: all 0.4s linear 0s;
-      }
+  }
     .post-slide .post-content {
       padding: 40px 0;
       position: relative;
@@ -127,4 +124,89 @@ body {
       font-size: 13px;
       color: #555;
       margin-bottom: 20px;
+    }
+    .container{
+      margin: 10px auto 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .container .box {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background: #F2F3AE;
+      margin: 10px; 
+      box-sizing: border-box;
+      display: inline-block;
+    }
+    .container .box .imgBox{
+      position: relative;
+      overflow: hidden;
+    }
+    .container .box .imgBox img{
+      max-width: 100%;
+      transition: transform 1s;
+    }
+    .container .box:hover .imgBox img{
+      transform: scale(1.2);
+    }
+    .container .box .details {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,.8);
+    }
+    .container .box .details .content{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+
+    }
+    .container .box .details .content h2{
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      color: #ff0;
+    }
+    .container .box .details .content p{
+      margin: 10px 0 0;
+      padding: 0;
+    }
+    p.solid {
+      border-style: solid;
+      border-width: 1px;
+      font-size: 1.2em;
+    }
+    p.solid:hover {
+      border-style: solid;
+      border-width: 1px;
+      background-color: rgb(235, 235, 235);
+      transition: all 0.5s linear 0s;
+    }
+    input[type=text], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */  
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
     }
