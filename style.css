@@ -7,14 +7,41 @@ body {
   color: #1B998B;
 }
 
+.bg-green {
+  color: #1B998B;
+  background-image: linear-gradient(to right, rgba(23, 157, 139, .5), rgba(23, 157, 139, 1));
+}
+
 .rectangle {
-  height: 300px;
-  width: 200px;
+  height: 310px;
+  width: 210px;
   background-color: #1B998B;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 12%;
+  padding-top: 140px;
+  padding-left: 10px;
   z-index: 1;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-rectangle {
+  width: 90%;
+}
+
+.icon-nav {
+  width: 100px;
+}
+
+@media screen and (min-width: 1100px) {
+  .icon-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .rectangle {
+    display: none;
+  }
 }
 
 #text-carousel {
@@ -27,8 +54,16 @@ body {
   z-index: 1;
 }
 
-.carousel-inner {
-  opacity: 0.5;
+.button-download {
+  background-color: #F2F3AE;
+  color: rgb(82, 82, 82);
+  position: absolute;
+  text-align: center;
+  padding: 0.7em;
+  border-radius: 3px;
+  align-content: right;
+  overflow: hidden;
+
 }
 
 .button-read {
@@ -37,17 +72,16 @@ body {
   background-color: #F2F3AE;
   color: rgb(82, 82, 82);
   position: absolute;
-  left: 105em;
-  top: 41em;
   text-align: center;
   padding: 0.7em;
   border-radius: 3px;
-
+  align-content: right;
   overflow: hidden;
+
 }
 
 .button-read::before {
-  content: 'czytaj dalej';
+  content: 'Wyślij';
   position: absolute;
   left: 0;
   padding: 0.7em;
@@ -71,7 +105,7 @@ body {
 
 .underline {
   text-decoration: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #1B998B;
   display: inline-block;
 }
 
@@ -111,12 +145,12 @@ body {
   left: 10px;
   bottom: 10px;
   right: 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .container .box .details .content {
   position: absolute;
-  top: 60%;
+  top: 55%;
   transform: translateY(-50%);
   text-align: left;
   padding: 15px;
@@ -152,18 +186,8 @@ p.solid:hover {
   transition: all 0.5s linear 0s;
 }
 
-.section-4 .container h1 {
-  font-size: 6vmin;
-  padding-top: 14vmin;
-}
-
-.section-4 .team {
-  padding: 10vmin;
-}
-
 .section-4 .card {
   width: 30em;
-  margin-top: 10vmin;
 }
 
 .section-4 .card .card-text {
@@ -181,4 +205,24 @@ p.solid:hover {
 
 .border-radius-projects {
   border-radius: 10px;
+}
+
+#fixed {
+  background: url(./img/fixed.jpeg) no-repeat center center fixed;
+  height: 60%;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+footer {
+  width: 100%;
+  background-color: #1B998B;
+  padding: 5% 5% 10% 5%;
+  color: #FFF;
+}
+
+.icon {
+  width: 50%;
 }
